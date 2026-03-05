@@ -1,0 +1,487 @@
+:root {
+    --primary-blue: #0d47a1;
+    --secondary-blue: #1565c0;
+    --accent-blue: #42a5f5;
+    --text-dark: #212529;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: #f8f9fa;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: var(--font-heading);
+}
+
+.font-playfair {
+    font-family: var(--font-heading);
+}
+
+/* Navbar */
+#mainNav {
+    background-color: var(--primary-blue);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 50%, var(--accent-blue) 100%);
+    min-height: 60vh;
+    padding-top: 60px; /* Offset for sticky nav if needed */
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-blue);
+    margin-bottom: 3rem;
+}
+
+/* Article Cards */
+.article-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #fff;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.article-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer Elements */
+.qr-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+/* Article Page Specifics */
+.article-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+
+.tracking-wide {
+    letter-spacing: 1.5px;
+}
+
+/* Pull Quote */
+.pull-quote {
+    background-color: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Creative Writing Specifics */
+
+/* Animated Drop Cap */
+.drop-cap::first-letter {
+    float: left;
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 0.8;
+    font-weight: 700;
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--primary-blue);
+}
+
+/* Section Divider */
+.section-divider {
+    height: 3px;
+    width: 80px;
+    background-color: var(--accent-blue);
+    margin: 3rem auto;
+    border-radius: 2px;
+}
+
+/* Poetry Styling */
+.poetry-box {
+    background-color: #f0f8ff;
+    border-left: 4px solid var(--primary-blue);
+    padding: 2.5rem;
+    border-radius: 0 12px 12px 0;
+}
+
+/* Member Quote Cards */
+.member-quote-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid var(--accent-blue);
+    transition: transform 0.2s ease;
+}
+
+.member-quote-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Creative Nonfiction Specifics */
+.feature-box {
+    background-color: #fff;
+    border: 1px solid var(--primary-blue);
+    border-top: 5px solid var(--primary-blue);
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.feature-box-icon {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.icon-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.feature-box-icon {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* DISS Specifics */
+.infographic-item {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infographic-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(13, 71, 161, 0.1);
+    border-color: var(--accent-blue);
+}
+
+.infographic-icon {
+    font-size: 3.5rem;
+    color: var(--secondary-blue);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.infographic-item:hover .infographic-icon {
+    transform: scale(1.2) rotate(10deg);
+    color: var(--primary-blue);
+}
+
+/* DISS Page - Highlight Cards */
+.highlight-bullet-card {
+    background-color: #e3f2fd; /* Light blue background */
+    border-left: 4px solid var(--accent-blue);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0 8px 8px 0;
+}
+.highlight-bullet-card p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+/* Religion Page - Definition Card */
+.definition-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-left: 4px solid var(--primary-blue);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+}
+/* Religion Specifics */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.verse-box {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.verse-text {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-style: italic;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* DIASS Specifics */
+.stat-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-bottom: 4px solid var(--primary-blue);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-family: var(--font-heading);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Politics Specifics - Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid #dee2e6;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.4rem; /* Adjust based on padding and border */
+    top: 0.25rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px var(--primary-blue);
+}
+
+/* Community Engagement Specifics */
+.project-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.cta-block {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+    color: white;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(13, 71, 161, 0.2);
+}
+
+/* Trends Specifics */
+.video-placeholder {
+    background-color: #000;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.comparison-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.comparison-card.trend { border-top: 5px solid #198754; }
+.comparison-card.fad { border-top: 5px solid #dc3545; }
+
+/* Toggle Switch */
+.comparison-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px;
+    background-color: white; transition: .4s; border-radius: 50%;
+}
+input:checked + .slider { background-color: var(--primary-blue); }
+input:checked + .slider:before { transform: translateX(26px); }
+
+/* Politics Specifics - Opinion Cards */
+.opinion-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-top: 4px solid var(--primary-blue);
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opinion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.highlight-box {
+    background-color: #e3f2fd;
+    border-left: 4px solid var(--accent-blue);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Page Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Scroll Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 2000;
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--accent-blue);
+    width: 0%;
+    transition: width 0.1s;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-5px);
+}
